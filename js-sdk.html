@@ -38,6 +38,10 @@
     <button id='scrape-button'>
       This should need a scrape
     </button>
+
+    <button id='og-button'>
+      This is the og button
+    </button>
   </p>
 
 
@@ -73,6 +77,17 @@
         href: (window.location.toString()+'?t='+Date.now())
       }, function(response){});
     }
+
+    document.getElementById('scrape-button').onclick = function() {
+      FB.ui({
+        display: 'popup',
+        method: 'share_open_graph',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+            object:(window.location.toString()+'?t='+Date.now()),
+        })
+      }, function(response){});
+    }      
   </script>
 
 
