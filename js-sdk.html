@@ -38,7 +38,9 @@
     <button id='scrape-button'>
       This should need a scrape
     </button>
+  </p>
 
+  <p>
     <button id='og-button'>
       This is the og button
     </button>
@@ -78,7 +80,7 @@
       }, function(response){});
     }
 
-    document.getElementById('scrape-button').onclick = function() {
+    document.getElementById('og-button').onclick = function() {
       FB.ui({
         display: 'popup',
         method: 'share_open_graph',
